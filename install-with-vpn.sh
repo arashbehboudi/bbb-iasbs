@@ -73,3 +73,5 @@ install_docker() {
     chmod +x /usr/local/bin/docker-compose
   fi
 }
+
+main "$@" || exit 1
