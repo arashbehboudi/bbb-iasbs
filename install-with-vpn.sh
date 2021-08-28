@@ -1,3 +1,6 @@
+#!/bin/bash -e
+
+
 main() {
   SOURCES_FETCHED=false
     if [ ! -f /etc/apt/sources.list.d/nodesource.list ]; then
