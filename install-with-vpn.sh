@@ -28,6 +28,8 @@ main() {
 
     docker pull themaqs/gl:latest
     docker pull postgres:13.2-alpine
+    docker pull dpage/pgadmin4
+
 }
 
 check_root() {
