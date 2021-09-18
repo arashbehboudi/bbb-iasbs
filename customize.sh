@@ -8,7 +8,7 @@ chmod +x /etc/bigbluebutton/bbb-conf/apply-config.sh
 
 echo "Change default presentation file and logo"
 cp ./files/logo/favicon.ico ./files/logo/main.png ./files/logo/small.png /var/www/bigbluebutton-default/
-cp ./files/logo/favicon.ico ./files/logo/small.png /var/www/bigbluebutton/client/
+cp ./files/logo/favicon.ico ./files/logo/small.png /var/www/bigbluebutton/
 cp ./files/default.pdf /var/www/bigbluebutton-default/
 
 echo "Change Max Upload File from 30M to 80M"

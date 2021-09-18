@@ -60,13 +60,13 @@ begin
   if not FileTest.directory?(target_dir)
     FileUtils.mkdir_p target_dir
   end
-  class_date = Time.at(class_date[1].to_i / 1000).strftime("%Y-%m-%d_%H-%M")
+  c_date = Time.at(class_date[1].to_i / 1000).strftime("%Y-%m-%d_%H-%M")
   if not FileTest.exist?("#{published_file}/metadata.xml")
       BigBlueButton.logger.info("Error in generating zip! metadat.xml does not exist: '#{meeting_id}' ")
       exit
   end
   doc = File.open("#{published_file}/metadata.xml") { |f| Nokogiri::XML(f) }
-  class_name = "#{doc.at_xpath('/recording/meta/meetingName').content.gsub(' ','_')}_#{class_date}"
+  class_name = "#{class_date[0]}_#{c_date}"
   if FileTest.exist?("#{target_dir}/#{class_name}.zip")
       system ("mv '#{base}/#{class_name}.zip' '#{published_file}/'")
       exit
