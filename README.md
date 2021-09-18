@@ -33,4 +33,4 @@ We are installing BigBlueButton with a **clean** and **dedicated** Ubuntu 18.04 
 ###
 
 
-bash bbb-install.sh -v bionic-240 -s relearn.iasbs.ac.ir -e elearn@iasbs.ac.ir -w -g
+bash bbb-install.sh -v bionic-240 -s elearn2.iasbs.ac.ir -e elearn@iasbs.ac.ir -w -g
